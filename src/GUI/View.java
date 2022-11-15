@@ -75,10 +75,10 @@ public class View extends JFrame implements ActionListener, MouseListener {
 
             }
         }
-
+         // filling the fina path to green 
         for(int i=0; i<path.size(); i +=2){
-            int pathx = path.get(i);
-            int pathy = path.get(i+1);
+            int pathx = path.get(i); // xposition
+            int pathy = path.get(i+1); //yposition
             g.setColor(Color.green);
             g.fillRect(40*pathy, 40*pathx,40,40);
         }
