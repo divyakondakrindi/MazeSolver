@@ -125,11 +125,11 @@ public class View extends JFrame implements ActionListener, MouseListener {
             Graphics g = getGraphics();
             g.setColor(Color.WHITE); // earlier end point must be set to white.
             //first we have stored the target array with rows and column
-            // 40*target[1,0] -> will take you to the point(440,320) ->position of 9th element
+            // 40*target[1,0] -> will take you to the point(440,320) ->position of default end point
             g.fillRect(40*target[1], 40*target[0],40,40);
             g.setColor(Color.RED);
             g.fillRect(40*y,40*x, 40,40);
-            maze[target[0]][target[1]] = 0; // the previous end point which is set 9 is changed to 0
+            maze[target[0]][target[1]] = 0; // the previous end point's value 9 must be changed to 0(make red to white box)
             maze[x][y] = 9;
             //updating the target array to new red box
             target[0] =x;
